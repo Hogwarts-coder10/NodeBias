@@ -1,0 +1,14 @@
+{
+    "Female": {
+        "total_patients": 54708,
+        "readmission_rate_percentage": 46.92
+    },
+    "Male": {
+        "total_patients": 47055,
+        "readmission_rate_percentage": 45.12
+    },
+    "Unknown/Invalid": {
+        "total_patients": 3,
+        "readmission_rate_percentage": 0.0
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "model_type": "GlassBoxML Random Forest",
+    "ensemble_size": 10,
+    "metrics": {
+        "disparate_impact_ratio": 0.981,
+        "status": "PASS"
+    },
+    "feature_priority": [
+        {
+            "feature": "num_lab_procedures",
+            "weight": 0.35
+        },
+        {
+            "feature": "insulin",
+            "weight": 0.25
+        },
+        {
+            "feature": "age",
+            "weight": 0.2
+        }
+    ]
+}

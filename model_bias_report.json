@@ -1,0 +1,15 @@
+{
+    "Male": {
+        "total_tested": 9427,
+        "ai_predicted_readmission_rate_percentage": 44.27
+    },
+    "Female": {
+        "total_tested": 10927,
+        "ai_predicted_readmission_rate_percentage": 47.23
+    },
+    "Metrics": {
+        "Disparate_Impact_Ratio": 0.937,
+        "Status": "Fair"
+    },
+    "Model_Explanation": "--- GlassBox Explanation: Logistic Regression ---\nDecision Boundary (Log-Odds): X * [-1.2660e-01  9.0100e-02  9.5000e-03  1.7300e-02  4.2300e-02  1.3200e-02\n -5.2800e-02  2.2400e-02  2.0800e-02  1.1900e-02 -4.6600e-02  1.4600e-02\n -4.9900e-02  1.6700e-02  6.8500e-02  1.0520e-01  2.3080e-01 -1.3500e-02\n -3.8000e-03  1.5100e-02  9.2100e-02 -9.6000e-03 -1.5900e-02 -2.8200e-02\n  9.2000e-03  2.2000e-03 -1.0000e-03  1.3000e-03  0.0000e+00  8.8000e-03\n -5.7000e-03 -1.0000e-04  9.2000e-03  1.2600e-02  1.5800e-02  5.1000e-03\n  2.6000e-03 -5.5000e-03  0.0000e+00  0.0000e+00 -1.2600e-02  2.2000e-03\n  6.5000e-03  5.6000e-03 -7.7000e-03  0.0000e+00 -2.5900e-02  5.4100e-02\n -2.0631e+00 -1.2100e-02] + 0.0138 = 0\nDecision Threshold: 0.5\nInterpretation: Features with positive coefficients push the probability toward Class 1. Features with negative coefficients push the probability toward Class 0."
+}

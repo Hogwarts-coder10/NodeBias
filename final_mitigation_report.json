@@ -1,0 +1,21 @@
+{
+    "model_bias_original": {
+        "group_rates": {
+            "Male": 56.58,
+            "Female": 64.24
+        },
+        "disparity_gap": 7.66,
+        "dir": 0.881,
+        "status": "Biased (Amplified)"
+    },
+    "mitigation_results": {
+        "strategy_used": "Fairness Through Unawareness (Feature Blinding)",
+        "group_rates_after": {
+            "Male": 44.91,
+            "Female": 46.56
+        },
+        "disparity_gap_after": 1.64,
+        "dir_after": 0.965,
+        "status": "Safe for Deployment"
+    }
+}
