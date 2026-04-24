@@ -3,11 +3,19 @@
 > 🏆 Built to ensure fair, transparent, and accountable AI systems.
 
 **An End-to-End AI Fairness Audit & Active Mitigation Microservice**
-*Built for the 2026 Google Solution Challenge*
+*An End-to-End Clinical Fairness Audit & Active Mitigation Microservice Built for the 2026 Google Solution Challenge*
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-Backend-green.svg)](https://flask.palletsprojects.com/)
-[![Gemini API](https://img.shields.io/badge/Google%20AI-Gemini%202.5%20Flash-orange.svg)](https://ai.google.dev/)
+[![Gemini API](https://img.shields.io/badge/Google%20AI-Gemini%202.0%20Flash-orange.svg)](https://ai.google.dev/)
+
+
+## 🚀 Deployment & Tech
+Backend: Flask / Gunicorn (Render) optimized for 512MB RAM.
+
+Frontend: React / Vite (Vercel) for rapid clinical reporting.
+
+AI Engine: Hybrid Router (GlassBoxML + Scikit-Learn) + Gemini 2.0 Flash.
 
 # ⚖️ NodeBias
 [**Live Demo 🚀**](https://nodebias.vercel.app/)
@@ -22,36 +30,35 @@ Ensuring fairness in AI is not just a technical challenge—it is a societal nec
 
 ---
 
+## 🏥 Medical Context & Problem Statement
+In healthcare, AI models are used for readmission prediction, triage, and diagnosis. However, if these models are biased against specific genders, ethnicities, or age groups, they can lead to disparate health outcomes. NodeBias was engineered to provide medical professionals with a "GlassBox" view of their models, ensuring that clinical decisions are based on data, not systemic bias.
+
+## 🇺🇳 UN SDG Alignment
+NodeBias directly supports Goal 3: Good Health and Well-being and Goal 10: Reduced Inequalities. By auditing clinical models, we ensure that technological advancement in medicine does not come at the cost of equity.
+
 ## 💡 Solution: NodeBias
+NodeBias is a specialized fairness microservice for medical AI that:
 
-**NodeBias** is a fairness auditing and mitigation microservice that:
+🔍 Clinical Telemetry: Detects bias in medical datasets (e.g., patient demographics).
 
-* 🔍 Detects bias in datasets and model predictions
-* ⚖️ Quantifies fairness using standard metrics
-* 🛠️ Actively mitigates bias before deployment
-* 🤖 Explains results in simple human language
+⚖️ Safety Audits: Quantifies fairness using the Disparate Impact Ratio (DIR).
 
-Unlike traditional tools that only detect bias, **NodeBias fixes it**.
+🛠️ Active Mitigation: Uses Algorithmic Reweighing to correct bias before deployment.
+
+🤖 Clinical Summaries: Explains audit results in plain English for hospital administrators and doctors.
 
 ---
+
 
 ## ✨ Core Features
+🛠️ GlassBoxML (Custom Engine)
+A custom-built ML framework designed for Auditability. Unlike "Black Box" models, GlassBoxML allows clinicians to trace how demographic features influence predictions, ensuring a transparent baseline before any mitigation is applied.
 
-### 🔍 Universal Telemetry Scanner
+⚖️ Medical Grade Mitigation
+Utilizes Algorithmic Reweighing to balance parity. In our tests on the Diabetes Readmission Dataset, we successfully moved a biased model to a 0.993 DIR, achieving near-perfect mathematical equity across gender lines.
 
-Automatically detects protected attributes (gender, age, etc.) and proxy variables using hybrid heuristics.
-
----
-
-### 🛠️ GlassBoxML (Custom Engine)
-
-A custom-built machine learning framework implemented from scratch using Python and NumPy.
-
-* Decision Trees / Random Forests
-* Logistic Regression with Momentum
-* Transparent, interpretable predictions
-
----
+🤖 Gemini-Powered Reporting
+Leverages Google Gemini 2.0 Flash to bridge the gap between data science and clinical practice. It generates professional audit summaries that explain why a model is safe for deployment.
 
 ### 🔀 Hybrid ML Router
 
@@ -80,6 +87,7 @@ Uses **Google Gemini 2.5 Flash** to:
 * Bridge technical → human understanding
 
 ---
+
 
 ## 🏗️ System Architecture
 
