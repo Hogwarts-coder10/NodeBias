@@ -9,6 +9,9 @@
 [![Flask](https://img.shields.io/badge/Flask-Backend-green.svg)](https://flask.palletsprojects.com/)
 [![Gemini API](https://img.shields.io/badge/Google%20AI-Gemini%202.5%20Flash-orange.svg)](https://ai.google.dev/)
 
+# ⚖️ NodeBias
+[**Live Demo 🚀**](https://nodebias.vercel.app/)
+
 ---
 
 ## 🌍 Problem Statement
