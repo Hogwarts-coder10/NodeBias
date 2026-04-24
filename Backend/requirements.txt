@@ -7,3 +7,4 @@ Werkzeug
 google-genai
 gunicorn
 glassboxml
+python-dotenv
