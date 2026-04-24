@@ -23,7 +23,13 @@ from glassboxml.models import DecisionTreeClassifier as gb_DT
 from glassboxml.core import Momentum
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {
+    "origins": [
+        "https://nodebias.vercel.app", 
+        "https://nodebias-ddm626ym2-thefletchers-projects.vercel.app",
+        "http://localhost:5173" # Keep this for local testing!
+    ]
+}})
 
 UPLOAD_FOLDER = "temp_uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
