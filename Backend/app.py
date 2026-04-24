@@ -99,9 +99,9 @@ def run_audit():
 
         # 1. LOAD & DOWNSAMPLE (SIGKILL PREVENTION)
         df = pd.read_csv(filepath)
-        if len(df) > 7000:
-            print(f"⚠️ Downsampling {len(df)} rows to 7000 for RAM stability.")
-            df = df.sample(n=7000, random_state=42).reset_index(drop=True)
+        if len(df) > 3000:
+            print(f"⚠️ Downsampling {len(df)} rows to 3000 for RAM stability.")
+            df = df.sample(n=3000, random_state=42).reset_index(drop=True)
 
         df.replace(['?', 'NA', 'N/A', '', 'NULL'], np.nan, inplace=True)
         df = df.dropna(subset=[target_col, sensitive_col]).reset_index(drop=True)
@@ -151,15 +151,15 @@ def run_audit():
         if mitigation == 'reweighing':
             engine_used = "Sklearn"
             if model_type == 'Logistic Regression': model = sk_LR(max_iter=1000)
-            elif model_type == 'Decision Tree': model = sk_DT(max_depth=6)
-            else: model = sk_RF(n_estimators=5, max_depth=6)
+            elif model_type == 'Decision Tree': model = sk_DT(max_depth=3)
+            else: model = sk_RF(n_estimators=3, max_depth=6)
             model.fit(X_train_scaled, y_train, sample_weight=w_train)
             predictions = model.predict(X_test_scaled)
         else:
             engine_used = "GlassBoxML"
             if model_type == 'Logistic Regression': model = gb_LR(optimizer=Momentum(learning_rate=0.01))
-            elif model_type == 'Decision Tree': model = gb_DT(max_depth=6)
-            else: model = gb_RF(n_trees=5, max_depth=6)
+            elif model_type == 'Decision Tree': model = gb_DT(max_depth=3)
+            else: model = gb_RF(n_trees=3, max_depth=6)
             model.fit(X_train_scaled, y_train.values)
             predictions = model.predict(X_test_scaled)
 
