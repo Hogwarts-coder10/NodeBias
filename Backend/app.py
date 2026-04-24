@@ -152,14 +152,14 @@ def run_audit():
             engine_used = "Sklearn"
             if model_type == 'Logistic Regression': model = sk_LR(max_iter=1000)
             elif model_type == 'Decision Tree': model = sk_DT(max_depth=10)
-            else: model = sk_RF(n_estimators=10, max_depth=10)
+            else: model = sk_RF(n_estimators=5, max_depth=10)
             model.fit(X_train_scaled, y_train, sample_weight=w_train)
             predictions = model.predict(X_test_scaled)
         else:
             engine_used = "GlassBoxML"
             if model_type == 'Logistic Regression': model = gb_LR(optimizer=Momentum(learning_rate=0.01))
             elif model_type == 'Decision Tree': model = gb_DT(max_depth=10)
-            else: model = gb_RF(n_trees=10, max_depth=10)
+            else: model = gb_RF(n_trees=5, max_depth=10)
             model.fit(X_train_scaled, y_train.values)
             predictions = model.predict(X_test_scaled)
 
